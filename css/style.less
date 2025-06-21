@@ -1,0 +1,254 @@
+// compress: True
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.button-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+}
+
+/* Header */
+header {
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.search-form input[type="text"] {
+  margin-right: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-buttons a {
+  margin: 5px 10px;
+}
+
+.categories {
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.category-item img {
+  width: 80px;
+  height: 30px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.category-item:last-child img {
+  width: 50px;
+}
+
+.latest-dec {
+  margin-bottom: 30px;
+  min-height: 459px;
+}
+
+.dec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.dec-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  display: block;
+  width: 290px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.dec-item a {
+  display: block;
+  color: inherit;
+}
+
+.dec-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dec-info {
+  padding: 10px;
+}
+
+.search-toggle {
+  display: none;
+}
+
+.dec-info h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.dec-info .price {
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 5px;
+}
+
+.dec-info .location {
+  color: #777;
+  font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #dee2e6;
+}
+
+@media (max-width: 968px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: auto;
+    max-width: none;
+  }
+  .dec-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .dec-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 155px;
+  }
+
+  .search-form {
+    position: absolute;
+  }
+
+  .search-container {
+    z-index: 1000;
+    visibility: hidden;
+    position: fixed;
+    top: 170px;
+    left: 40px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  .search-container.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .search-toggle {
+    z-index: 900;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -2px;
+    top: 160px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #007bff;
+    background-color: #007bff;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .search-toggle span {
+    background-color: #fff;
+    height: 4px;
+    width: 30px;
+    margin: 3px 0;
+    border-radius: 2px;
+  }
+}
+
+@import "blocks/ad.less";
+@import "blocks/auth.less";
+@import "blocks/category.less";
+@import "blocks/favorites.less";
+@import "blocks/message.less";
+@import "blocks/post-ad.less";
+@import "blocks/profile.less";

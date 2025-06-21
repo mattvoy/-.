@@ -1,0 +1,74 @@
+// main: ../style.css
+
+.auth-form {
+  max-width: 400px;
+  margin: 70px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.container.auth {
+  height: 500px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.auth-form input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.auth-form button[type="submit"] {
+  margin-top: 10px;
+}
+
+.footer__auth {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.msg {
+  color: #cf0000;
+  font-weight: 700;
+}
+
+@media (max-width: 968px) {
+  .auth-form {
+    margin: 20px auto;
+  }
+
+  .button-primary {
+    font-size: 17px;
+  }
+
+  .post-dec {
+    display: none;
+  }
+
+  .search-form.auth {
+    display: none;
+  }
+
+  .footer__auth {
+    position: relative;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #dee2e6;
+  }
+}

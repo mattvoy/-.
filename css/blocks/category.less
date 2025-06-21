@@ -1,0 +1,151 @@
+// main: ../style.css
+
+.category-page {
+  display: flex;
+  gap: 20px;
+}
+
+.filters {
+  width: 250px;
+  flex-shrink: 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  height: 560px;
+}
+
+.filters__form {
+  width: 200px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.filter-group {
+  margin-bottom: 15px;
+}
+
+.filter-group h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.filters input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.dec-list {
+  flex-grow: 1;
+  min-height: 599px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination.hidden {
+  display: none;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination a.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.sort-by {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.sort-by:focus {
+  outline: none;
+}
+
+.apply-filters {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.reset-filters {
+  padding: 10px 15px;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+}
+
+.filters-toggle {
+  display: none;
+}
+
+@media (max-width: 968px) {
+  .filters-container {
+    visibility: hidden;
+    position: fixed;
+    top: 63px;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .filters-container.active {
+    z-index: 1000;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .filters {
+    z-index: 1000;
+    height: 565px;
+  }
+
+  .filters-toggle {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: -2px;
+    top: 160px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #007bff;
+    background-color: #007bff;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .filters-toggle span {
+    background-color: #fff;
+    height: 4px;
+    width: 30px;
+    margin: 3px 0;
+    border-radius: 2px;
+  }
+}

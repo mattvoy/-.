@@ -1,0 +1,149 @@
+// main: ../style.css
+
+.profile-content {
+  display: flex;
+  gap: 20px;
+}
+
+.container.prof {
+  min-height: 705px;
+}
+
+.profile-sidebar {
+  height: 375px;
+  width: 250px;
+  flex-shrink: 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.profile-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-sidebar li {
+  margin-bottom: 5px;
+}
+
+.profile-sidebar a {
+  display: block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.profile-sidebar a:hover {
+  background-color: #e0e0e0;
+}
+
+.profile-main {
+  flex-grow: 1;
+}
+
+.dec-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dec-info {
+  padding: 10px;
+}
+
+.dec-info h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.dec-info .price {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.dec__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.date__public {
+  color: #b3b3b3;
+}
+
+.profile-sidebar-toggle {
+  display: none;
+}
+
+.delete-ad-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.delete-ad-button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 968px) {
+  .date__public {
+    font-size: 10px;
+  }
+  .profile-container {
+    visibility: hidden;
+    position: fixed;
+    top: 63px;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .profile-container.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .profile-sidebar {
+    height: 269px;
+  }
+
+  .profile-sidebar-toggle {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: -2px;
+    top: 160px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #007bff;
+    background-color: #007bff;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .profile-sidebar-toggle span {
+    background-color: #fff;
+    height: 4px;
+    width: 30px;
+    margin: 3px 0;
+    border-radius: 2px;
+  }
+}

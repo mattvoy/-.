@@ -1,0 +1,123 @@
+// main: ../style.css
+
+.messages-content {
+  display: flex;
+  gap: 20px;
+}
+
+.messages-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  max-height: 330px;
+}
+
+.messages-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.messages-sidebar li {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.messages-sidebar a {
+  display: block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.messages-sidebar a.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.messages-main {
+  min-height: 567px;
+  flex-grow: 1;
+}
+
+.chat-messages {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.message-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message-item.received {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+}
+
+.message-item.sent {
+  background-color: #d4edda;
+  align-self: flex-end;
+}
+
+.message-form {
+  display: flex;
+  gap: 10px;
+}
+
+.message-form input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.message-form button[type="submit"] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-chat-button {
+  transform: translateX(218px) translateY(-24px);
+  color: #cf0000;
+  font-weight: 800;
+}
+
+@media (max-width: 968px) {
+  .messages-sidebar {
+    width: 115px;
+
+    transition: 0.1s linear;
+
+    &.active {
+      transform: translateX(-167px);
+    }
+  }
+
+  .delete-chat-button {
+    transform: translateX(85px) translateY(-24px);
+  }
+
+  .messages-main {
+    transition: 0.1s linear;
+  }
+
+  .messages-main.active {
+    transform: translateX(-145px);
+  }
+}
